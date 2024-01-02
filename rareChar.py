@@ -1233,5 +1233,6 @@ print ('dictionary methods = ', dir(char_occurence))
 
 list_dict_Items = char_occurence.items()
 print ('list of items = ', list_dict_Items)
-for k,v in list_dict_Items:
-    print ([v,k])
+for k,v in list_dict_Items: # this is how we loop through the items of a dictionary
+    print ([v,k]) # we can chang the order off course
+
