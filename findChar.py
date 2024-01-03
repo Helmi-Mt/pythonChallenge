@@ -1,5 +1,5 @@
 # challenge : One small letter, surrounded by EXACTLY three big bodyguards on each of its sides.
-import re
+import re # import the regex expression to python
 input = '''
 kAewtloYgcFQaJNhHVGxXDiQmzjfcpYbzxlWrVcqsmUbCunkfxZWDZjUZMiGqhRRiUvGmYmvnJIHEmbT
 MUKLECKdCthezSYBpIElRnZugFAxDRtQPpyeCBgBfaRVvvguRXLvkAdLOeCKxsDUvBBCwdpMMWmuELeG
@@ -1258,21 +1258,16 @@ print (dir(input))
 print ('is A upper case ? ','A'.isupper())
 print ('is a upper case ? ','a'.isupper())
 
-result = re.findall("[A-Z]{3}[a-z][A-Z]{3}",input)
-result.sort()
+result = re.findall("[a-z0-9][A-Z]{3}[a-z][A-Z]{3}[a-z0-9]",input)
+# result.sort()
 print ('result = ', result)
 print ('number of occurences = ', len(result))
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
-order = 0
+word = None
 for i in result:
-    word = i
-    # print (i)
-    listC = list(i)
-    listC.sort()
-    print (listC)
-    # print ('order = ',order)
-    # if (i[:3] == i[4:]):
-    # if ( i[0] == i[4]):
-    # print ('this is the result = ',i)
-    order += 1;
+    try:
+        word += i[4]
+    except :
+        word = i[4]
         
+print ('word = ', word)
