@@ -1258,7 +1258,8 @@ print (dir(input))
 print ('is A upper case ? ','A'.isupper())
 print ('is a upper case ? ','a'.isupper())
 
-result = re.findall("[a-z0-9][A-Z]{3}[a-z][A-Z]{3}[a-z0-9]",input)
+result = re.findall("[a-z0-9][A-Z]{3}[a-z][A-Z]{3}[a-z0-9]",input) # this regex expression will test fro one lowcase + 3x upper case + one lowecase + 3x upper case + one lowercase
+
 # result.sort()
 print ('result = ', result)
 print ('number of occurences = ', len(result))
