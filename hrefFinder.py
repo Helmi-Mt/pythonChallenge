@@ -36,6 +36,7 @@ for i in deserialised_data:
     for tup in i:
         print (tup[0]*tup[1],end='') # this will print without adding newline break
     print ('-')
+print ('the result = channel')
     
 # the result after drawing this pattern is : Channel 
     
